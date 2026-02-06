@@ -6,7 +6,7 @@ const FormComponent = ({ todoList, setTodoList }) => {
 
     const [inputValue, setInputValue] = useState({ id: "", content: "", checked: false });
     const dispatch = useDispatch();
-    const tasks = useSelector(state => state.tasks)
+    const tasks = useSelector(state => state.taskReducer.tasks)
 
     const handleFormSubmit = (e) => {
         e.preventDefault();

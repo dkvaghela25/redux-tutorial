@@ -5,7 +5,7 @@ import { clearAll } from '../store'
 
 const TodoTable = () => {
 
-    const tasks = useSelector(state => state.tasks)
+    const tasks = useSelector(state => state.taskReducer.tasks)
     const dispatch = useDispatch();
 
     const handleClearAll = () => {

@@ -6,7 +6,6 @@ import { deleteTask, updateTask } from '../store';
 
 const Task = ({ task }) => {
 
-  const tasks = useSelector(state => state.tasks);
   const dispatch = useDispatch();
 
   const handleDeleteTask = () => {
