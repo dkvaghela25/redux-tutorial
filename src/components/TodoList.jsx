@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FormComponent from './FormComponent'
 import TodoTable from './TodoTable';
-import { fetchData, store } from '../store';
+import { fetchData } from '../features/tasks/taskSlice';
 import { useDispatch } from 'react-redux';
 
 const TodoList = () => {

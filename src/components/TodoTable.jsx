@@ -1,7 +1,7 @@
 import React from 'react'
 import Task from './Task'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearAll } from '../store'
+import { clearAll } from '../features/tasks/taskSlice'
 
 const TodoTable = () => {
 

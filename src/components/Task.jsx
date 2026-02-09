@@ -2,7 +2,7 @@ import React from 'react'
 import { MdOutlineTaskAlt } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTask, updateTask } from '../store';
+import { deleteTask, updateTask } from '../features/tasks/taskSlice';
 
 const Task = ({ task }) => {
 

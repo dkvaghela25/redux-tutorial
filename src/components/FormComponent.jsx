@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addTask } from '../store';
+import { addTask } from '../features/tasks/taskSlice';
 
 const FormComponent = ({ todoList, setTodoList }) => {
 
