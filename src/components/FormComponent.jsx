@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { addTask } from '../store';
+import useTodo from '../store/useTodo';
 
-const FormComponent = ({ todoList, setTodoList }) => {
+const FormComponent = () => {
 
     const [inputValue, setInputValue] = useState({ id: "", content: "", checked: false });
-    const dispatch = useDispatch();
-    const tasks = useSelector(state => state.tasks)
+    const { tasks, addTask } = useTodo();
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -19,9 +17,8 @@ const FormComponent = ({ todoList, setTodoList }) => {
             return;
         }
 
+        addTask(content);
         setInputValue({ id: "", content: "", checked: false });
-
-        return dispatch(addTask(content));
 
     }
 
